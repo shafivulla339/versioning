@@ -23,9 +23,8 @@ jobs:
           minor_pattern: "feat:"
           format: "v${major}.${minor}.${patch}-prerelease${increment}"
       - name: Login to JFrog   
-        uses: jfrog/setup-jfrog-cli@v2
+        uses: jfrog/setup-jfrog-cli@v1
         with:
-          registry: https://shafivulla.jfrog.io
           username: ${{ secrets.JFROG_USER_WRITER }}
           password: ${{ secrets.JFROG_PASSWORD_WRITER }}
       - name: Build and push 
