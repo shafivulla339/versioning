@@ -23,7 +23,7 @@ jobs:
           minor_pattern: "feat:"
           format: "v${major}.${minor}.${patch}-prerelease${increment}"
       - name: Login to JFrog   
-        uses: docker/login-action@v1
+        uses: shafivulla/jfrog-cli@v3
         with:
           registry: https://shafivulla.jfrog.io
           username: ${{ secrets.JFROG_USER_WRITER }}
