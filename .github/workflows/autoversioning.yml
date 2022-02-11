@@ -25,7 +25,6 @@ jobs:
       - name: Login to JFrog   
         uses: jfrog/setup-jfrog-cli@v1
         with:
-          version: latest
           username: ${{ secrets.JFROG_USER_WRITER }}
           password: ${{ secrets.JFROG_PASSWORD_WRITER }}
       - name: Build and push 
